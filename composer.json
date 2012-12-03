@@ -1,0 +1,21 @@
+{
+    "name":"lostintime/php-lit-oauth2",
+    "description":"PHP classes for building oauth2 client and server applications",
+    "minimum-stability":"dev",
+    "authors":[
+        {
+            "name":"lostintime",
+            "email":"lostintime.dev@gmail.com"
+        }
+    ],
+    "keywords":["oauth2"],
+    "license":"MIT",
+    "autoload":{
+        "psr-0":{
+            "Lit\\OAuth2":"src/"
+        }
+    },
+    "require":{
+        "phpunit/phpunit": "3.7.*"
+    }
+}
