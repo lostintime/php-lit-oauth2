@@ -1,6 +1,36 @@
 {
-    "hash": "83b6bc229886f243ab9de38d9de501b5",
+    "hash": "2f98f9e207ce09d3b524020fe6e7a20d",
     "packages": [
+        {
+            "name": "lostintime/php-lit-common",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "git@lostintimedev.com:lostintime/php-lit-common.git",
+                "reference": "79140ee82e51018b0ecbac07cb036ef0307cfca6"
+            },
+            "require": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "time": "2012-12-03 20:28:59",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Lit\\Common": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "lostintime",
+                    "email": "lostintime.dev@gmail.com"
+                }
+            ],
+            "description": "PHP common usage classes"
+        },
         {
             "name": "phpunit/php-code-coverage",
             "version": "1.2.x-dev",

@@ -16,6 +16,13 @@
         }
     },
     "require":{
-        "phpunit/phpunit": "3.7.*"
-    }
+        "phpunit/phpunit": "3.7.*",
+        "lostintime/php-lit-common": "*"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "git@lostintimedev.com:lostintime/php-lit-common.git"
+        }
+    ]
 }

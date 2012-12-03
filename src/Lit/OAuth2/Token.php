@@ -155,7 +155,7 @@ abstract class Token
     }
 
     /**
-     * checks if tocken is expired
+     * checks if token is expired
      * @return boolean
      */
     public function expired()

@@ -115,10 +115,12 @@ abstract class Server
      * @param boolean $authorized
      * @param Request $request
      * @param ResourceOwnerCredentials|null $resourceOwnerCredentials
+     * @throws Exception
      */
     final public function grantAuthorization($authorized, Request $request, ResourceOwnerCredentials $resourceOwnerCredentials = null)
     {
         $response = new AuthorizationGrantResponse();
+        $redirectUri = null;
         try {
 
             // initialize authorization
@@ -360,6 +362,7 @@ abstract class Server
 
     /**
      * check's request (header/get/post) for access token
+     * @throws Exception
      * @return AccessToken
      */
     public function verifyAccessToken()
@@ -383,6 +386,7 @@ abstract class Server
 
     /**
      * extracts and checks ClientCredentials from request
+     * @throws Exception
      * @return array
      */
     protected function getRequestClientCredentials()
@@ -542,11 +546,7 @@ abstract class Server
      *   Client identifier to be check with.
      * @param $responseType
      *
-     * @return
-     *   TRUE if the authorization response type is supported by this
-     *   client identifier, and FALSE if it isn't.
-     *
-     * @ingroup oauth2_section_3
+     * @return bool TRUE if the authorization response type is supported by this@ingroup oauth2_section_3
      */
     protected function checkRestrictedAuthResponseType($clientId, $responseType)
     {
@@ -581,9 +581,7 @@ abstract class Server
      * If you want to support scope use, then have this function return a list
      * of all acceptable scopes (used to throw the invalid-scope error).
      * @static Scope $scope
-     * @return
-     *   A list as below, for example:
-     * @code
+     * @return \Lit\OAuth2\Scope|object A list as below, for example:@code
      * return new Scope('my-friends photos whatever-else');
      * @endcode
      *
