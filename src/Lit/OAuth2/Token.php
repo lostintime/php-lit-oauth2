@@ -7,7 +7,7 @@ namespace Lit\OAuth2;
  * @package Lito\OAuth2
  * @author lostintime
  */
-abstract class Token
+class Token
 {
     const EXPIRES_ONE_MINUTE = 60;
     const EXPIRES_ONE_HOUR = 3600;

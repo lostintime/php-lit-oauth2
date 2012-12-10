@@ -216,7 +216,7 @@ abstract class Server
                 throw new Exception(Constants::ERROR_UNAUTHORIZED_CLIENT, Constants::ERRCODE_GRANT_TYPE_NOT_ALLOWED_TO_CLIENT);
 
             /**
-             * @var RefreshToken
+             * @var Token
              */
             $refreshToken = null;
 
@@ -295,11 +295,11 @@ abstract class Server
                         throw new Exception(Constants::ERROR_INVALID_REQUEST, Constants::ERRCODE_PARAM_REFRESH_TOKEN_REQUIRED);
 
                     /**
-                     * @var RefreshToken
+                     * @var Token
                      */
                     $refreshToken = $this->findRefreshToken($request[Constants::PARAM_REFRESH_TOKEN]);
 
-                    if (!$refreshToken instanceof RefreshToken)
+                    if (!$refreshToken instanceof Token)
                         throw new Exception(Constants::ERROR_INVALID_GRANT, Constants::ERRCODE_REFRESH_TOKEN_NOT_FOUND);
 
                     if ($refreshToken->getClientId() != $clientCredentials->getId())
@@ -345,7 +345,7 @@ abstract class Server
             // check if refresh token grant type server support and client access rights and it not set before
             if (in_array(Constants::GRANT_TYPE_REFRESH_TOKEN, $this->getSupportedGrantTypes())
                 && $this->checkClientGrantTypeSupport($accessToken->getClientId(), Constants::GRANT_TYPE_REFRESH_TOKEN)
-                && !$refreshToken instanceof RefreshToken
+                && !$refreshToken instanceof Token
             ) {
                 $refreshToken = $this->createRefreshToken($accessToken, $request);
             }
@@ -363,7 +363,7 @@ abstract class Server
     /**
      * check's request (header/get/post) for access token
      * @throws Exception
-     * @return AccessToken
+     * @return Token
      */
     public function verifyAccessToken()
     {
@@ -375,7 +375,7 @@ abstract class Server
         // Get the stored token data (from the implementing subclass)
         $token = $this->findAccessToken($token_param);
 
-        if (!$token instanceof AccessToken)
+        if (!$token instanceof Token)
             throw new Exception(Constants::ERROR_INVALID_GRANT, Constants::ERRCODE_ACCESS_TOKEN_NOT_FOUND);
 
         if ($token->expired())
@@ -624,7 +624,7 @@ abstract class Server
     /**
      * @abstract
      * @param string $token
-     * @return AccessToken|null
+     * @return Token|null
      */
     abstract protected function findAccessToken($token);
 
@@ -633,7 +633,7 @@ abstract class Server
      * @param string $clientId
      * @param Scope|null $scope
      * @param ResourceOwnerCredentials|null $resourceOwnerCredentials
-     * @return AccessToken
+     * @return Token
      */
     abstract protected function createAccessToken($clientId, Scope $scope = null, ResourceOwnerCredentials $resourceOwnerCredentials = null);
 
@@ -647,14 +647,14 @@ abstract class Server
     /**
      * @abstract
      * @param string $token
-     * @return RefreshToken|null
+     * @return Token|null
      */
     abstract protected function findRefreshToken($token);
 
     /**
      * @abstract
      * @param Token $token
-     * @return RefreshToken|null
+     * @return Token|null
      */
     abstract protected function createRefreshToken(Token $token);
 

@@ -10,20 +10,20 @@ class AccessTokenResponse extends Response
 {
 
     /**
-     * @var AccessToken
+     * @var Token
      */
     private $accessToken;
 
     /**
-     * @var RefreshToken
+     * @var Token
      */
     private $refreshToken;
 
     /**
-     * @param AccessToken $accessToken
-     * @param RefreshToken|null $refreshToken
+     * @param Token $accessToken
+     * @param Token|null $refreshToken
      */
-    public function __construct(AccessToken $accessToken, RefreshToken $refreshToken = null)
+    public function __construct(Token $accessToken, Token $refreshToken = null)
     {
         $this->setAccessToken($accessToken);
         if ($refreshToken)
@@ -31,10 +31,10 @@ class AccessTokenResponse extends Response
     }
 
     /**
-     * @param AccessToken $accessToken
+     * @param Token $accessToken
      * @return void
      */
-    public function setAccessToken(AccessToken $accessToken)
+    public function setAccessToken(Token $accessToken)
     {
         $this->accessToken = $accessToken;
 
@@ -49,7 +49,7 @@ class AccessTokenResponse extends Response
     }
 
     /**
-     * @return AccessToken
+     * @return Token
      */
     public function getAccessToken()
     {
@@ -57,10 +57,10 @@ class AccessTokenResponse extends Response
     }
 
     /**
-     * @param RefreshToken $refreshToken
+     * @param Token $refreshToken
      * @return void
      */
-    public function setRefreshToken(RefreshToken $refreshToken)
+    public function setRefreshToken(Token $refreshToken)
     {
         $this->refreshToken = $refreshToken;
         $this->set(Constants::PARAM_REFRESH_TOKEN, $refreshToken->getToken());
@@ -76,7 +76,7 @@ class AccessTokenResponse extends Response
     }
 
     /**
-     * @return RefreshToken
+     * @return Token
      */
     public function getRefreshToken()
     {
