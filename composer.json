@@ -17,12 +17,12 @@
     },
     "require":{
         "phpunit/phpunit": "3.7.*",
-        "lostintime/php-lit-common": "*"
+        "lostintime/php-lit-common": "0.0.*"
     },
     "repositories": [
         {
             "type": "git",
-            "url":  "git@lostintimedev.com:lostintime/php-lit-common.git"
+            "url":  "https://github.com/lostintime/php-lit-common.git"
         }
     ]
 }

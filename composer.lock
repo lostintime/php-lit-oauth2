@@ -1,18 +1,18 @@
 {
-    "hash": "2f98f9e207ce09d3b524020fe6e7a20d",
+    "hash": "58b1730110383ae71631f8460502924e",
     "packages": [
         {
             "name": "lostintime/php-lit-common",
-            "version": "dev-develop",
+            "version": "v0.0.1",
             "source": {
                 "type": "git",
-                "url": "git@lostintimedev.com:lostintime/php-lit-common.git",
-                "reference": "79140ee82e51018b0ecbac07cb036ef0307cfca6"
+                "url": "https://github.com/lostintime/php-lit-common.git",
+                "reference": "v0.0.1"
             },
             "require": {
                 "phpunit/phpunit": "3.7.*"
             },
-            "time": "2012-12-03 20:28:59",
+            "time": "2012-12-31 10:43:13",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -37,12 +37,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "1.2.7"
+                "reference": "c6242a9faf0498faffb32a26660f29dd9f1abeff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sebastianbergmann/php-code-coverage/archive/1.2.7.zip",
-                "reference": "1.2.7",
+                "url": "https://github.com/sebastianbergmann/php-code-coverage/archive/c6242a9faf0498faffb32a26660f29dd9f1abeff.zip",
+                "reference": "c6242a9faf0498faffb32a26660f29dd9f1abeff",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "ext-dom": "*",
                 "ext-xdebug": ">=2.0.5"
             },
-            "time": "2012-12-02 14:54:55",
+            "time": "2012-12-04 12:01:38",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -63,6 +63,7 @@
                     "PHP/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "include-path": [
                 ""
             ],
@@ -223,19 +224,19 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "c6d365771312aba7b347bc477faef850eea3488f"
+                "reference": "e69d777f167bdc41c3ea58dcebcc34f983aac05c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sebastianbergmann/php-token-stream/archive/c6d365771312aba7b347bc477faef850eea3488f.zip",
-                "reference": "c6d365771312aba7b347bc477faef850eea3488f",
+                "url": "https://github.com/sebastianbergmann/php-token-stream/archive/e69d777f167bdc41c3ea58dcebcc34f983aac05c.zip",
+                "reference": "e69d777f167bdc41c3ea58dcebcc34f983aac05c",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
                 "php": ">=5.3.3"
             },
-            "time": "2012-10-15 08:44:10",
+            "time": "2012-12-19 13:36:57",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -243,6 +244,7 @@
                     "PHP/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "include-path": [
                 ""
             ],
@@ -268,12 +270,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3.7.10"
+                "reference": "911a4f1d5dff3e08be90133e984c8a39e510c348"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sebastianbergmann/phpunit/archive/3.7.10.zip",
-                "reference": "3.7.10",
+                "url": "https://github.com/sebastianbergmann/phpunit/archive/911a4f1d5dff3e08be90133e984c8a39e510c348.zip",
+                "reference": "911a4f1d5dff3e08be90133e984c8a39e510c348",
                 "shasum": ""
             },
             "require": {
@@ -295,7 +297,7 @@
                 "ext-tokenizer": "*",
                 "phpunit/php-invoker": ">=1.1.0"
             },
-            "time": "2012-12-02 14:56:55",
+            "time": "2012-12-27 11:30:34",
             "bin": [
                 "composer/bin/phpunit"
             ],
@@ -311,6 +313,7 @@
                     "PHPUnit/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "include-path": [
                 "",
                 "../../symfony/yaml/"
@@ -389,18 +392,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml",
-                "reference": "bed4fddc24392513e01b32a78d600b1272ed9a6c"
+                "reference": "365b4df7802b9bb93084d2cc9a51fe88b488f956"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Yaml/archive/bed4fddc24392513e01b32a78d600b1272ed9a6c.zip",
-                "reference": "bed4fddc24392513e01b32a78d600b1272ed9a6c",
+                "url": "https://github.com/symfony/Yaml/archive/365b4df7802b9bb93084d2cc9a51fe88b488f956.zip",
+                "reference": "365b4df7802b9bb93084d2cc9a51fe88b488f956",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2012-11-13 14:08:04",
+            "time": "2012-12-19 07:09:49",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -413,6 +416,7 @@
                     "Symfony\\Component\\Yaml\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
