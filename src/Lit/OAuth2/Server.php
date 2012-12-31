@@ -357,7 +357,7 @@ abstract class Server
             $response = new ErrorResponse(Constants::ERROR_INVALID_REQUEST, 0, 'system error (' . $exc->getMessage() . ')');
         }
 
-        return $this->sendJsonResponse($response);
+        $this->sendJsonResponse($response);
     }
 
     /**
